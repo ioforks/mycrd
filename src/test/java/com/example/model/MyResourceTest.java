@@ -9,7 +9,7 @@ class MyResourceTest {
     @Test
     void testBuilder() {
         MyResource r = new MyResourceBuilder().withNewSpec().withName("Ruben").withAlias("ruromero").endSpec().build();
-        MyResource other = new MyResourceBuilder(r).withSpec(r.getSpec()).build();
+        MyResource other = new MyResourceBuilder(r).build();
         
         assertEquals(r.toString(), other.toString());
     }
