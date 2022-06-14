@@ -18,4 +18,10 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class MyResource extends CustomResource<MySpec, MyStatus> implements Namespaced {
+
+    public MyResource(MySpec spec, MyStatus status) {
+        super();
+        setSpec(spec);
+        setStatus(status);
+    }
 }
